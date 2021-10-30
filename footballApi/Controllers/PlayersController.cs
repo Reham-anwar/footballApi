@@ -56,33 +56,11 @@ namespace footballApi.Controllers
             return NoContent();
         }
 
-        //update: api/players/id
-        //[HttpPut]
-        //public async Task<ActionResult<Player>> UpdatePlayer(int id, Player player)
-        //{
-        //    if (id != player.Id)
-        //        return BadRequest();
 
-        //    _context.Entry(player).State = EntityState.Modified;
 
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!PlayerExists(id))
-        //            return NotFound();
-        //        else
-        //            throw;
-        //    }
-
-        //    return NoContent();
-        //}
-
-        //private bool PlayerExists(int id)
-        //{
-        //    return _context.Players.Any(e => e.Id == id);
-        //}
+        private bool PlayerExists(int id)
+        {
+            return _context.Players.Any(e => e.Id == id);
+        }
     }
 }
