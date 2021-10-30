@@ -86,7 +86,7 @@ namespace footballApi.Controllers
             return NoContent();
         }
 
-        // DELETE api/teams/id                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        // DELETE api/teams/id                  
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTeam(int id)
         {
