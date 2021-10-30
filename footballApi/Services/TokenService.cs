@@ -19,6 +19,8 @@ namespace footballApi.Services
         public TokenService(IConfiguration Config)
         {
             _Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Config["TokenKey"]));
+
+
         }
 
         public string CreateToken(AppUser appUser)
