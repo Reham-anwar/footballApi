@@ -46,7 +46,7 @@ namespace footballApi.Controllers
 
         // POST api/teams
         [HttpPost]
-        [Authorize(Roles ="Admin")]
+        //[Authorize(Roles ="Admin")]
         public async Task<ActionResult<Team>> PostTeam(Team team)
         {
             //String authHeaders = Request.Headers["Authorization"].FirstOrDefault();
